@@ -21,7 +21,6 @@ function exec(sql) {
     return promise
 }
 
-
 // 断开连接 (保持连接状态)
 // con.end()
 
