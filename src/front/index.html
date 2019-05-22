@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var xhr = new XMLHttpRequest()
+    xhr.open('GET', 'http://localhost:8000/api/blog/list', true)
+    
+    xhr.onreadystatechange = function () { 
+      if(xhr.status === 200 && xhr.readyState === 4) {
+        console.log(JSON.stringify(xhr.responseText))
+      }
+     }
+     xhr.send()
+  </script>
+</body>
+</html>
